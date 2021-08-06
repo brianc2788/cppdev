@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1627942631 source:/home/userone/dev/cpp/hman1/hman1-main.cpp
+	<cstdlib>
+	<iostream>
+	<stdio.h>
+	<string>
+	"hman1.h"
+
+1627942646 /home/userone/dev/cpp/hman1/hman1.h
+
+1627942729 source:/home/userone/dev/cpp/hman1/hman1.cpp
+	"hman1.h"
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1626147618 source:/home/userone/dev/cpp/conscreen1/conscreen1-src.cpp
+	<stdio.h>
+	<string>
+

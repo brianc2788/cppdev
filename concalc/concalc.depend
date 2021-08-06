@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1626466562 source:/home/userone/dev/cpp/concalc/concalc-src.cpp
+	<iostream>
+	<stdio.h>
+	<cstdlib>
+	"concalc.h"
+
+1626466350 /home/userone/dev/cpp/concalc/concalc.h
+	<cstdlib>
+	<stdio.h>
+	<string>
+
+1626466389 source:/home/userone/dev/cpp/concalc/concalc.cpp
+	"concalc.h"
+
