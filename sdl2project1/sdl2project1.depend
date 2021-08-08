@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1628459067 source:/home/userone/dev/cpp/sdl2project1/main.cpp
+	<stdio.h>
+	<cstdlib>
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+
