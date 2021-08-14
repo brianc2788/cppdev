@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1626128950 source:/home/userone/dev/cpp/concalc1/concalc-src.c
+	<stdio.h>
+	<stdbool.h>
+

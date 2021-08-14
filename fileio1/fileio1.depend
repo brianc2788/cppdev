@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1628561670 source:/home/userone/dev/cpp/fileio1/main.cpp
+	<fstream>
+	<string>
+	<iostream>
+	<cstdlib>
+
