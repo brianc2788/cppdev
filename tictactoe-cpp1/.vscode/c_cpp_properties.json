@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "new-gcc",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/include"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "linux-gcc-x64",
+            "browse": {
+                "path": [
+                    "/home/userone/dev/cpp-projects/tictactoe-cpp1"
+                ]
+            }
+        }
+    ],
+    "version": 4
+}
