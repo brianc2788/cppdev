@@ -24,10 +24,6 @@
 // 'flushed', the program loop works as intended
 // once, before the problem returns.
 // Hope this wasn't too verbose.
-// I think it's important to understand that
-// these things don't happen automatically.
-// The language takes care of this stuff
-// for the programmer behind the scenes.
 /************************************************/
 #include <stdio.h>
 #include <stdbool.h>
