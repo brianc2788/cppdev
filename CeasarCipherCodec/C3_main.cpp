@@ -17,6 +17,10 @@ NOTES:
 #include <string>
 using namespace std;
 
+// this func name is misleading;
+// it wasn't originally intended to,
+// but it encapsulates the entire
+// encryption process.
 string convNumeric(string strOrigin, int nKeyIn);
 
 int main(int argc,char* argv[]){
