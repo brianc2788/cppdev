@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1631664896 source:/home/userone/dev/cpp-projects/print_args/main.c
+	<stdio.h>
+	<string.h>
+

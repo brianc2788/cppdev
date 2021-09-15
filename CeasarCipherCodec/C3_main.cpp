@@ -69,7 +69,7 @@ string convNumeric(string strOrigin, int nKeyIn){
             strEncoded += " ";
         }
         else{
-            strEncoded += (((nList[n]-65)+nKeyIn) % 26)+65;
+            strEncoded += (((nList[n]-65)+nKeyIn) % 26)+65; // 65 comes from ascii char values - uppercase alphabet are values 65-90 (A-Z).
         }
     }
 

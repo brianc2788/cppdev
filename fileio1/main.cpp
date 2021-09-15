@@ -1,25 +1,6 @@
 /*
-File:       br_to_csv_src.cpp
-Project:    bottlerecTocsv
------------------------------
-Peronsal project for formatting
-my custom 'Bottle Records' to
-.csv files for SQL compatibility.
-
-[Current State]
-Opens/creates a file and writes a string to it.
-Then, opens the file, gets a string, and prints
-it.
-
-[Notes/Comments]
-This project was to refamiliarize myself with the
-file read/write facilities in C/C++.
-For now, the code for reading the file will only
-take characters up to whitespace (as well as new
-line, EOF, etc.).
-
-brianc2788@gmail.com
-github.com/user5260
+just a refresher for how to do
+io with files with c/cpp.
 */
 #include <fstream>
 #include <string>
@@ -35,7 +16,11 @@ int main(int argc,char* argv[]){
         printf("couldn't open file for write operation.\n");
     }
     else{
-        std::string writeString = "this is a string.";
+        //std::string writeString = "this is a NEW string.";
+        printf("Writing to file: %s\n",&fileName);
+        std::string writeString = "";
+        printf("Enter a string to write to file:\n");
+        getline(std::cin,writeString);
         fileOut << writeString << std::endl;
         fileOut.close();
     }
@@ -47,10 +32,9 @@ int main(int argc,char* argv[]){
     }
     else{
         std::string readString;
-        // only reads characters up to whitespace. see getline().
-        fileIn >> readString;
+        //fileIn >> readString;
+        getline(fileIn,readString);
         fileIn.close();
-        //cant get print to work
         //printf("read from file: %s",readString);
         std::cout << "read from file: " << readString << std::endl;
     }
