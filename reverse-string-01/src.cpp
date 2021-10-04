@@ -30,7 +30,7 @@ int main(int argc,char* argv[]){
               << std::endl;
     // init a string variable and get input from the user.
     std::string strIn, strIn_reverse = "";
-    std::cout << "Enter a string (single word, no white-space).\nEnter: ";
+    std::cout << "Enter a string of text.\nEnter: ";
     // gets input, flush stdin, insert '\n'.
     //std::cin >> strIn; getchar(); std::cout << std::endl;
     std::getline(std::cin,strIn);
