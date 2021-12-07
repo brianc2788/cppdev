@@ -1,5 +1,6 @@
 // vector refresher
 #include <iostream>
+#include <stdio.h>
 #include <string>
 #include <vector>
 
@@ -18,10 +19,13 @@ int main(int argc,char* argv[]){
     std::cout << "\ngot your string." << std::endl
               << "you typed:" << std::endl;
 
-    // iterate through the str vector.
-    for (std::string el : sVector){
-        std::cout << el << std::endl;
+    for (int n = 0; n < sVector.size();n++){
+	std::cout << sVector[n] << std::endl;
     }
+    // iterate through the str vector.
+    //for (std::string el : sVector){
+    //    std::cout << el << std::endl;
+    //}
 
     return 0;
 }
