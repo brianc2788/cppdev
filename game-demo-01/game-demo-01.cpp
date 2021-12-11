@@ -45,6 +45,9 @@ int main(int argc,char* argv[]){
 						bRun = false;
 					}
 				}
+				//Adding a delay - your CPU will thank me.
+				//lol. just until we add fps & flow control.
+				SDL_Delay(500);
 			}
 		}
 	}
