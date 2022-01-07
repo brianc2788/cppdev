@@ -1,3 +1,5 @@
+/*clearly, there are no vectors here. not sure
+  what i was thinking... ha.*/
 // Just wanted to use the std namespace
 // for readablity. Not sure why I'm so
 // averse to using it.
