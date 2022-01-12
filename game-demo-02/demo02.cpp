@@ -8,6 +8,7 @@ brianc2788@gmail.com
 http://github.com/user5260/cpp-projects/game-demo-02
 *************************************************/
 #include <stdio.h>
+#include <ctime>
 #include <SDL2/SDL.h>
 
 const int screenW = 640;
@@ -54,6 +55,23 @@ bool init(){
         if(pWin1 != nullptr){
             pRendererMain = SDL_CreateRenderer(pWin1,-1,SDL_RENDERER_ACCELERATED);
             if(pRendererMain != nullptr){
+                //randomly set draw color to R,G, or B.
+                srand(time(nullptr));
+                int rcolor = rand() % 3;
+                printf("%d\n",rcolor);
+                if(rcolor == 0){
+                    SDL_SetRenderDrawColor(pRendererMain, 0xFF,0x0,0x0,0xFF);
+                }
+                else if(rcolor == 1){
+                    SDL_SetRenderDrawColor(pRendererMain, 0x0,0xFF,0x0,0xFF);
+                }
+                else if(rcolor == 2){
+                    SDL_SetRenderDrawColor(pRendererMain, 0x0,0x0,0xFF,0xFF);
+                }
+                else{
+                    SDL_SetRenderDrawColor(pRendererMain, 0x0,0x0,0x0,0xFF);
+                }
+                
                 return true;
             }
         }
@@ -72,7 +90,6 @@ void close(){
 }
 
 void render(){
-    SDL_SetRenderDrawColor(pRendererMain, 0x0,0x0,0x0,0xFF);
     SDL_RenderClear(pRendererMain);
     SDL_RenderPresent(pRendererMain);
 }
