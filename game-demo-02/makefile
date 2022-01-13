@@ -3,7 +3,7 @@ SRC = demo02.cpp
 CC = g++
 CFLAGS = -w #supress warnings
 LFLAGS = -lSDL2
-OUT = demo02.bin
+OUT = demo02
 
 all : $(SRC)
 	$(CC) $(SRC) $(CFLAGS) $(LFLAGS) -o $(OUT)
