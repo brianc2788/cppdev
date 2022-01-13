@@ -14,7 +14,7 @@ authored by brianc2788@gmail.com
 
 int main(int argc,char* argv[]){
 	Fl_Window* window = new Fl_Window(340,180);
-	Fl_Box* box = new Fl_Box(20,40,300,100,"Hi, FLTK!");
+	Fl_Box* box = new Fl_Box(20,40,300,100,"Hi, FLTK!\nbrianc2788");
 
 	box->box(FL_UP_BOX);
 	box->labelfont(FL_BOLD+FL_ITALIC);
