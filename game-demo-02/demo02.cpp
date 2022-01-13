@@ -1,8 +1,8 @@
 /*************************************************
 # game-demo-02
-# 2D game demo using SDL.
-Starting another game demo project, but with
-some different design choices.
+# SDL draw routine demo
+# Opens a window filled with a random color (red,
+# green, or blue).
 Authored by
 brianc2788@gmail.com
 http://github.com/user5260/cpp-projects/game-demo-02
@@ -39,7 +39,7 @@ int main(int argc,char* argv[]){
 
     // free resources & quit.
     close();
-    printf("DEBUG: Exiting without error...\n");
+    //printf("DEBUG: Exiting without error...\n");
 
     return 0;
 }
@@ -58,7 +58,7 @@ bool init(){
                 //randomly set draw color to R,G, or B.
                 srand(time(nullptr));
                 int rcolor = rand() % 3;
-                printf("%d\n",rcolor);
+                //printf("%d\n",rcolor);
                 if(rcolor == 0){
                     SDL_SetRenderDrawColor(pRendererMain, 0xFF,0x0,0x0,0xFF);
                 }
