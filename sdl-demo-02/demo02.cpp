@@ -90,7 +90,6 @@ void close(){
 }
 
 void render(){
-    SDL_RenderClear(pRendererMain);
     SDL_RenderPresent(pRendererMain);
 }
 
