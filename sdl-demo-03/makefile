@@ -1,5 +1,5 @@
 # makes sdl-demo-03.
-SRC = shmup_main.cpp engine1.cpp engine1.h
+SRC = demo03.cpp engine1.cpp engine1.h
 CC = g++
 CFLAGS = -w #suppress warnings
 LFLAGS = -lSDL2
