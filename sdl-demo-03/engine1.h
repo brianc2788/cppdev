@@ -26,10 +26,10 @@ public:
     void quit_e1();
     bool Running() { return bRunning; };
 
-    SDL_Event event;
 private:
     SDL_Window* pWinMain;
     SDL_Renderer* pRendMain;
+    SDL_Event event;
 
     bool bRunning;
 };
