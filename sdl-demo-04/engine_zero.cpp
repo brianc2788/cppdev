@@ -69,15 +69,17 @@ void EngineZero::WaitForQuitEvent(){
                 break;
             }
         }
-	//delay until SDL_GetTicks() gets implemented.
+	//delay 200ms until SDL_GetTicks() gets implemented.
 	SDL_Delay(200);
     }
 }
 
 void EngineZero::RenderAndShow(){
     SDL_QueryTexture(TestTexture,NULL,NULL,&sRect.w,&sRect.h);
-    dRect.x = sRect.x = 0;
-    dRect.y = sRect.y = 0;
+    sRect.x = 0;
+    sRect.y = 0;
+    dRect.x = 0;
+    dRect.y = 0;
     dRect.w = sRect.w;
     dRect.h = sRect.h;
     SDL_RenderClear(RendMain);
