@@ -37,7 +37,7 @@ void Engine1::run(){
     while(bRunning){
         event_loop(event);
         update();
-        wait(500);
+//        wait(500);
     }
 }
 
@@ -55,6 +55,7 @@ void Engine1::wait(int ms){
 }
 
 void Engine1::event_loop(SDL_Event evnt){
+    while(SDL_WaitEvent(&evnt)){continue;}
     while(SDL_PollEvent(&evnt) != 0){
         if(evnt.type == SDL_QUIT) { bRunning = false; }
         else if(evnt.type == SDL_KEYDOWN){
