@@ -12,18 +12,17 @@
 	Done on the laptop downstairs and now here.
 	Answer: 4613732
 	Verified; correct.
-
-	still displays 5702887 even though it exceeds 4 mil.
 ******************************************************************************/
 #include <iostream>
-#include <stdio.h>
 
 int main(int argc, char* argv[])
 {
-	long long llnum1 = 0;
-	long long llnum2 = 1;
-	long long llsum = 0;
-	long long llevensum = 0;
+	std::cout << "Fibonacci #'s below 4 million..." << std::endl;
+
+	int llnum1 = 0;
+	int llnum2 = 1;
+	int llsum = 0;
+	int llevensum = 0;
 
 	bool b4mil = false;
 
@@ -33,18 +32,21 @@ int main(int argc, char* argv[])
 		llnum1 = llnum2;
 		llnum2 = llsum;
 
-		std::cout << llsum << std::endl;
-
 		if (llsum % 2 == 0)
 			llevensum += llsum;
 
-		if (llsum >= 4000000)
+		if (llsum >= 4000000){
 			b4mil = true;
+			break;
+		}
+
+		std::cout << llsum << std::endl;
 	}
 
     std::cout << "Whole Sum: " << llsum << std::endl;
 	std::cout << "Sum of Evens: " << llevensum << std::endl;
 
-	getchar();
+	//keep console open until user presses a key.
+	std::cin.get();
 	return 0;
 }
