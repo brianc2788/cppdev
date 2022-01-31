@@ -1,19 +1,19 @@
 /******************************************************
 # dec2bin - Decimal-to-Binary converter #
+-----------------------------------------
 Prompts user for a decimal number. Prints
 the binary equivalent.
 
-*Known bugs:
-    a. Stop printing preceeding zeroes. (FIXED)
-    c. May want to try copying and/or truncating
-       the bit array.
+- lowered the array to 32 elements because,
+  the code stops working around 32-bit ints
+  (varies on different PC's).
 
-Authored by brianc2788@gmail.com
+brianc2788@gmail.com
 ******************************************************/
 #include <stdio.h>
 #include <stdbool.h>
 
-int nBitArray[50];
+int nBitArray[32];
 void PrintBitArray(int nDecimal);
 
 int main(int argc,char* argv[]){
@@ -59,7 +59,15 @@ void PrintBitArray(int nDecimal){
             printf("%d",nBitArray[n]);
         }
 
+        int nBits = nIndex+1;
         //Report # of significant bits
-        printf("\n*%d bits\n\n", (nIndex+1));
+        printf("\n*%d bits / ", nBits);
+        //print bytes
+        if (nBits % 4 == 0){
+            printf("%d bytes\n\n", (nBits/8));
+        }
+        else{
+            printf("%d+ bytes\n\n",(nBits/8));
+        }
     }
 }
