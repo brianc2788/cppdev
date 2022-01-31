@@ -4,10 +4,6 @@
 Prompts user for a decimal number. Prints
 the binary equivalent.
 
-- lowered the array to 32 elements because,
-  the code stops working around 32-bit ints
-  (varies on different PC's).
-
 brianc2788@gmail.com
 ******************************************************/
 #include <stdio.h>
@@ -47,7 +43,7 @@ void PrintBitArray(int nDecimal){
             nBitArray[nIndex] = (nDecimal % 2);
             nDecimal = nDecimal/2;
             if(nDecimal == 0){
-                continue;
+                break;
             }
             else{
                 nIndex++;
@@ -59,15 +55,9 @@ void PrintBitArray(int nDecimal){
             printf("%d",nBitArray[n]);
         }
 
+        //Report # of significant bits & bytes (round down, 1 precision).
         int nBits = nIndex+1;
-        //Report # of significant bits
-        printf("\n*%d bits / ", nBits);
-        //print bytes
-        if (nBits % 4 == 0){
-            printf("%d bytes\n\n", (nBits/8));
-        }
-        else{
-            printf("%d+ bytes\n\n",(nBits/8));
-        }
+        float fBytes = nBits/8.0f;
+        printf("\n*%d Bits / %.1f Bytes.\n\n", nBits,fBytes);
     }
 }
