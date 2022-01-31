@@ -3,6 +3,7 @@ Cheat-sheet for C I/O...
 Ok, back to The C Programming Language by K&R!
 *************************************************/
 #include <stdio.h>
+#include <string.h>
 
 int main(int argc, char* argv[]){
 	printf("Enter a number (integer).\n");

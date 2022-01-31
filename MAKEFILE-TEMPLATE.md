@@ -1,13 +1,9 @@
-# Makefile template
-# to help me remember stuff.
-# to use, just rename makefile/Makefile
-# in your directory and change the
-# appropriate args...
+# A makefile template
 SRC = main.cpp
 OUT = out.bin
 COMPILER = g++
-#C_FLAGS = 
-#L_FLAGS = 
+C_FLAGS = 
+L_FLAGS = 
 
 all : $(SRC)
-	$(COMPILER) $(SRC) -o $(OUT)
+	$(COMPILER) $(SRC) $(CFLAGS) $(LFLAGS) -o $(OUT)
