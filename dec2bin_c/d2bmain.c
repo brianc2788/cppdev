@@ -16,7 +16,7 @@ int main(int argc,char* argv[]){
     printf("Enter a decimal number to see it's binary equivalent.\n");
     printf("Enter '0' to exit.\n\n");
     int nUsrInput = 1;
-    bool bRun = 1;
+    bool bRun = true;
     while(bRun){
         if (nUsrInput != 0){
             printf("Enter: ");
@@ -24,7 +24,7 @@ int main(int argc,char* argv[]){
             PrintBitArray(nUsrInput);
         }
         else if (nUsrInput == 0){
-            bRun = 0;
+            bRun = false;
         }
     }
 
@@ -42,12 +42,7 @@ void PrintBitArray(int nDecimal){
         while(nDecimal != 0){
             nBitArray[nIndex] = (nDecimal % 2);
             nDecimal = nDecimal/2;
-            if(nDecimal == 0){
-                break;
-            }
-            else{
-                nIndex++;
-            }
+            if(nDecimal != 0) nIndex++;
         }
 
         //Print the array of bits in reverse.
@@ -55,7 +50,7 @@ void PrintBitArray(int nDecimal){
             printf("%d",nBitArray[n]);
         }
 
-        //Report # of significant bits & bytes (round down, 1 precision).
+        //Print bits & bytes.
         int nBits = nIndex+1;
         float fBytes = nBits/8.0f;
         printf("\n*%d Bits / %.1f Bytes.\n\n", nBits,fBytes);
