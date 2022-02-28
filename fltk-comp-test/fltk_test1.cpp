@@ -5,6 +5,11 @@ Just wanted to try compiling & linking the
 FLTK library. Got main() and #includes from an
 example in the FLTK 1.3.5 documentation.
 
+edit: i just checked codeblocks's fltk template
+      (non-FLUID) is the same as this example
+      from the docset; barring the order of
+      some statements and a couple variables.
+
 authored by brianc2788@gmail.com
 *************************************************/
 #include <stdio.h>
