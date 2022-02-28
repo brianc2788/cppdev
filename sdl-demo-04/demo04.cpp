@@ -1,15 +1,8 @@
 /*************************************************
 # sdl-demo-04 #
 ---------------
-Using SDL to create a window and render an image.
-OOP-design only intended to render an image, wait
-five seconds, and clean up.
-Demo 05 will probably get into texture-object
-factories, events, etc.
-I have done similar projects with SDL, but this
-one is going to better utilize a renderer with
-textures that utilize hardware (gpu) features,
-rather than surfaces (drawing with cpu).
+Rewriting sdl demo project with OOP.
+Creates a window and a rendering, waits for user's quit event.
 
 Authored by brianc2788@gmail.com
 hosted on http://www.github.com/user5260/cpp-projects/sdl-demo-04/

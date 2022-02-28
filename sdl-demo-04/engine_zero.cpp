@@ -3,6 +3,7 @@
 
 EngineZero::EngineZero() { /* CTOR */ };
 EngineZero::~EngineZero() { /* DTOR */ };
+/* Not putting QuitE0() in the destructor. */
 
 bool EngineZero::init(const char* win_title, int screen_w, int screen_h, int iflags, int wflags){
     if (SDL_Init(iflags) != 0){
@@ -69,7 +70,8 @@ void EngineZero::WaitForQuitEvent(){
                 break;
             }
         }
-	//delay 200ms until SDL_GetTicks() gets implemented.
+	//delay 200ms until SDL_GetTicks() gets implemented,
+    //else, cpu just loops as hard as it can.
 	SDL_Delay(200);
     }
 }
