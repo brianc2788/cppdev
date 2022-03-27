@@ -380,35 +380,16 @@ int getFirstDay(int nYear) {		// floor is the sum of the number of past days in 
 bool bLeapYear(int nYear) {
 
 	bool bLeapYear = false;
+	
 	if ((nYear % 4) != 0) {
-		return false;
+		bLeapYear = false;
 	}
 	else if ((nYear % 100) != 0) {
-		return true;
+		bLeapYear = true;
 	}
 	else if ((nYear % 400) != 0) {
-		return false;
+		bLeapYear =  false;
 	}
 
+	return bLeapYear;
 }
-
-
-
-//bool bLeapYear(int nYear) {
-//	bool bLeapYear;
-//	if(n
-//
-//}
-
-
-////
-////bool bLeapYear(const int nYear){
-////	if (nYear != (nYear % 4) && nYear == (nYear % 100))
-////		
-////	if(nYear != (nYear % 400)) {
-////		return false;
-////	}
-////	else {
-////		return true;
-////	}
-////}
