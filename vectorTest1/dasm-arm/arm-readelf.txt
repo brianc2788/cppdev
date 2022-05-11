@@ -1,0 +1,749 @@
+ELF Header:
+  Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF32
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              EXEC (Executable file)
+  Machine:                           ARM
+  Version:                           0x1
+  Entry point address:               0x10bbc
+  Start of program headers:          52 (bytes into file)
+  Start of section headers:          26640 (bytes into file)
+  Flags:                             0x5000400, Version5 EABI, hard-float ABI
+  Size of this header:               52 (bytes)
+  Size of program headers:           32 (bytes)
+  Number of program headers:         9
+  Size of section headers:           40 (bytes)
+  Number of section headers:         30
+  Section header string table index: 29
+
+Section Headers:
+  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] .interp           PROGBITS        00010154 000154 000019 00   A  0   0  1
+  [ 2] .note.ABI-tag     NOTE            00010170 000170 000020 00   A  0   0  4
+  [ 3] .note.gnu.bu[...] NOTE            00010190 000190 000024 00   A  0   0  4
+  [ 4] .gnu.hash         GNU_HASH        000101b4 0001b4 0000dc 04   A  5   0  4
+  [ 5] .dynsym           DYNSYM          00010290 000290 0001f0 10   A  6   1  4
+  [ 6] .dynstr           STRTAB          00010480 000480 000441 00   A  0   0  1
+  [ 7] .gnu.version      VERSYM          000108c2 0008c2 00003e 02   A  5   0  2
+  [ 8] .gnu.version_r    VERNEED         00010900 000900 000090 00   A  6   3  4
+  [ 9] .rel.dyn          REL             00010990 000990 000018 08   A  5   0  4
+  [10] .rel.plt          REL             000109a8 0009a8 0000c8 08  AI  5  22  4
+  [11] .init             PROGBITS        00010a70 000a70 00000c 00  AX  0   0  4
+  [12] .plt              PROGBITS        00010a7c 000a7c 000140 04  AX  0   0  4
+  [13] .text             PROGBITS        00010bbc 000bbc 001484 00  AX  0   0  4
+  [14] .fini             PROGBITS        00012040 002040 000008 00  AX  0   0  4
+  [15] .rodata           PROGBITS        00012048 002048 0000c6 00   A  0   0  4
+  [16] .ARM.extab        PROGBITS        00012110 002110 00016c 00   A  0   0  4
+  [17] .ARM.exidx        ARM_EXIDX       0001227c 00227c 000120 00  AL 13   0  4
+  [18] .eh_frame         PROGBITS        0001239c 00239c 000004 00   A  0   0  4
+  [19] .init_array       INIT_ARRAY      00022ef4 002ef4 000008 04  WA  0   0  4
+  [20] .fini_array       FINI_ARRAY      00022efc 002efc 000004 04  WA  0   0  4
+  [21] .dynamic          DYNAMIC         00022f00 002f00 000100 08  WA  6   0  4
+  [22] .got              PROGBITS        00023000 003000 000074 04  WA  0   0  4
+  [23] .data             PROGBITS        00023074 003074 000008 00  WA  0   0  4
+  [24] .bss              NOBITS          00023080 00307c 000128 00  WA  0   0  8
+  [25] .comment          PROGBITS        00000000 00307c 000023 01  MS  0   0  1
+  [26] .ARM.attributes   ARM_ATTRIBUTES  00000000 00309f 00002f 00      0   0  1
+  [27] .symtab           SYMTAB          00000000 0030d0 001590 10     28 228  4
+  [28] .strtab           STRTAB          00000000 004660 00209d 00      0   0  1
+  [29] .shstrtab         STRTAB          00000000 0066fd 000110 00      0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  D (mbind), y (purecode), p (processor specific)
+
+There are no section groups in this file.
+
+Program Headers:
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
+  EXIDX          0x00227c 0x0001227c 0x0001227c 0x00120 0x00120 R   0x4
+  PHDR           0x000034 0x00010034 0x00010034 0x00120 0x00120 R   0x4
+  INTERP         0x000154 0x00010154 0x00010154 0x00019 0x00019 R   0x1
+      [Requesting program interpreter: /lib/ld-linux-armhf.so.3]
+  LOAD           0x000000 0x00010000 0x00010000 0x023a0 0x023a0 R E 0x10000
+  LOAD           0x002ef4 0x00022ef4 0x00022ef4 0x00188 0x002b4 RW  0x10000
+  DYNAMIC        0x002f00 0x00022f00 0x00022f00 0x00100 0x00100 RW  0x4
+  NOTE           0x000170 0x00010170 0x00010170 0x00044 0x00044 R   0x4
+  GNU_STACK      0x000000 0x00000000 0x00000000 0x00000 0x00000 RW  0x10
+  GNU_RELRO      0x002ef4 0x00022ef4 0x00022ef4 0x0010c 0x0010c R   0x1
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     .ARM.exidx 
+   01     
+   02     .interp 
+   03     .interp .note.ABI-tag .note.gnu.build-id .gnu.hash .dynsym .dynstr .gnu.version .gnu.version_r .rel.dyn .rel.plt .init .plt .text .fini .rodata .ARM.extab .ARM.exidx .eh_frame 
+   04     .init_array .fini_array .dynamic .got .data .bss 
+   05     .dynamic 
+   06     .note.ABI-tag .note.gnu.build-id 
+   07     
+   08     .init_array .fini_array .dynamic 
+
+Dynamic section at offset 0x2f00 contains 27 entries:
+  Tag        Type                         Name/Value
+ 0x00000001 (NEEDED)                     Shared library: [libstdc++.so.6]
+ 0x00000001 (NEEDED)                     Shared library: [libm.so.6]
+ 0x00000001 (NEEDED)                     Shared library: [libgcc_s.so.1]
+ 0x00000001 (NEEDED)                     Shared library: [libc.so.6]
+ 0x0000000c (INIT)                       0x10a70
+ 0x0000000d (FINI)                       0x12040
+ 0x00000019 (INIT_ARRAY)                 0x22ef4
+ 0x0000001b (INIT_ARRAYSZ)               8 (bytes)
+ 0x0000001a (FINI_ARRAY)                 0x22efc
+ 0x0000001c (FINI_ARRAYSZ)               4 (bytes)
+ 0x6ffffef5 (GNU_HASH)                   0x101b4
+ 0x00000005 (STRTAB)                     0x10480
+ 0x00000006 (SYMTAB)                     0x10290
+ 0x0000000a (STRSZ)                      1089 (bytes)
+ 0x0000000b (SYMENT)                     16 (bytes)
+ 0x00000015 (DEBUG)                      0x0
+ 0x00000003 (PLTGOT)                     0x23000
+ 0x00000002 (PLTRELSZ)                   200 (bytes)
+ 0x00000014 (PLTREL)                     REL
+ 0x00000017 (JMPREL)                     0x109a8
+ 0x00000011 (REL)                        0x10990
+ 0x00000012 (RELSZ)                      24 (bytes)
+ 0x00000013 (RELENT)                     8 (bytes)
+ 0x6ffffffe (VERNEED)                    0x10900
+ 0x6fffffff (VERNEEDNUM)                 3
+ 0x6ffffff0 (VERSYM)                     0x108c2
+ 0x00000000 (NULL)                       0x0
+
+Relocation section '.rel.dyn' at offset 0x990 contains 3 entries:
+ Offset     Info    Type            Sym.Value  Sym. Name
+00023070  00000315 R_ARM_GLOB_DAT    00000000   __gmon_start__
+00023080  00001b14 R_ARM_COPY        00023080   _ZSt4cout@GLIBCXX_3.4
+00023110  00000914 R_ARM_COPY        00023110   _ZSt3cin@GLIBCXX_3.4
+
+Relocation section '.rel.plt' at offset 0x9a8 contains 25 entries:
+ Offset     Info    Type            Sym.Value  Sym. Name
+0002300c  00001316 R_ARM_JUMP_SLOT   00000000   _Znwj@GLIBCXX_3.4
+00023010  00000f16 R_ARM_JUMP_SLOT   00000000   __aeabi_atexit@CXXABI_ARM_1.3.3
+00023014  00001016 R_ARM_JUMP_SLOT   00000000   _ZSt17__throw_bad[...]@GLIBCXX_3.4
+00023018  00001516 R_ARM_JUMP_SLOT   00000000   __cxa_begin_catch@CXXABI_1.3
+0002301c  00000616 R_ARM_JUMP_SLOT   00000000   _ZNSt7__cxx1112ba[...]@GLIBCXX_3.4.21
+00023020  00001616 R_ARM_JUMP_SLOT   00010acc   _ZSt4endlIcSt11ch[...]@GLIBCXX_3.4
+00023024  00000716 R_ARM_JUMP_SLOT   00000000   _ZSt20__throw_len[...]@GLIBCXX_3.4
+00023028  00001e16 R_ARM_JUMP_SLOT   00000000   _ZNSt7__cxx1112ba[...]@GLIBCXX_3.4.21
+0002302c  00001416 R_ARM_JUMP_SLOT   00000000   _ZNSt7__cxx1112ba[...]@GLIBCXX_3.4.21
+00023030  00000a16 R_ARM_JUMP_SLOT   00000000   abort@GLIBC_2.4
+00023034  00000816 R_ARM_JUMP_SLOT   00000000   _ZStlsIcSt11char_[...]@GLIBCXX_3.4.21
+00023038  00001a16 R_ARM_JUMP_SLOT   00000000   _ZdlPv@GLIBCXX_3.4
+0002303c  00001916 R_ARM_JUMP_SLOT   00000000   _ZStlsISt11char_t[...]@GLIBCXX_3.4
+00023040  00001c16 R_ARM_JUMP_SLOT   00000000   _ZNSolsEPFRSoS_E@GLIBCXX_3.4
+00023044  00000c16 R_ARM_JUMP_SLOT   00000000   __cxa_end_cleanup@CXXABI_1.3
+00023048  00001716 R_ARM_JUMP_SLOT   00000000   _ZNKSt9basic_iosI[...]@GLIBCXX_3.4.21
+0002304c  00000b16 R_ARM_JUMP_SLOT   00000000   _ZStrsIcSt11char_[...]@GLIBCXX_3.4.21
+00023050  00001816 R_ARM_JUMP_SLOT   00000000   _ZNSt7__cxx1112ba[...]@GLIBCXX_3.4.21
+00023054  00001d16 R_ARM_JUMP_SLOT   00000000   __cxa_rethrow@CXXABI_1.3
+00023058  00001216 R_ARM_JUMP_SLOT   00000000   _ZNSt8ios_base4In[...]@GLIBCXX_3.4
+0002305c  00000516 R_ARM_JUMP_SLOT   00000000   __cxa_end_catch@CXXABI_1.3
+00023060  00000d16 R_ARM_JUMP_SLOT   00000000   __gxx_personality_v0@CXXABI_1.3
+00023064  00000e16 R_ARM_JUMP_SLOT   00000000   __libc_start_main@GLIBC_2.4
+00023068  00000316 R_ARM_JUMP_SLOT   00000000   __gmon_start__
+0002306c  00001116 R_ARM_JUMP_SLOT   00010bb0   _ZNSt8ios_base4In[...]@GLIBCXX_3.4
+
+Unwind section '.ARM.exidx' at offset 0x227c contains 36 entries:
+
+0x10bbc <_start>: 0x1 [cantunwind]
+
+0x10cac <main>: @0x12110
+  Personality routine: 0x10b8c <_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@@GLIBCXX_3.4+0xc0>
+
+0x10eac <_Z41__static_initialization_and_destruction_0ii>: 0x1 [cantunwind]
+
+0x10f78 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EEC2Ev>: @0x1213c
+  Personality routine: 0x10b8c <_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@@GLIBCXX_3.4+0xc0>
+
+0x10fa4 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EED2Ev>: @0x1214c
+  Personality routine: 0x10b8c <_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@@GLIBCXX_3.4+0xc0>
+
+0x11000 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE9push_backERKS5_>: @0x1215c
+  Compact model index: 1
+  0x9b      vsp = r11
+  0x40      vsp = vsp - 4
+  0x84 0x80 pop {r11, r14}
+  0xb0      finish
+  0xb0      finish
+
+0x11084 <_ZNKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE4sizeEv>: 0x1 [cantunwind]
+
+0x11180 <_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EED1Ev>: @0x12168
+  Personality routine: 0x10b8c <_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@@GLIBCXX_3.4+0xc0>
+
+0x11208 <_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE19_M_get_Tp_allocatorEv>: 0x1 [cantunwind]
+
+0x1122c <_ZSt8_DestroyIPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES5_EvT_S7_RSaIT0_E>: @0x12178
+  Compact model index: 1
+  0x9b      vsp = r11
+  0x40      vsp = vsp - 4
+  0x84 0x80 pop {r11, r14}
+  0xb0      finish
+  0xb0      finish
+
+0x1125c <_ZNSt16allocator_traitsISaINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEE9constructIS5_JRKS5_EEEvRS6_PT_DpOT0_>: @0x12184
+  Compact model index: 1
+  0x9b      vsp = r11
+  0x40      vsp = vsp - 4
+  0x84 0x80 pop {r11, r14}
+  0xb0      finish
+  0xb0      finish
+
+0x1129c <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE3endEv>: 0x1 [cantunwind]
+
+0x112d4 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE17_M_realloc_insertIJRKS5_EEEvN9__gnu_cxx17__normal_iteratorIPS5_S7_EEDpOT_>: @0x12190
+  Personality routine: 0x10b8c <_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@@GLIBCXX_3.4+0xc0>
+
+0x1157c <_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE12_Vector_implC1Ev>: 0x1 [cantunwind]
+
+0x115f0 <_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE13_M_deallocateEPS5_j>: @0x121c4
+  Compact model index: 1
+  0x9b      vsp = r11
+  0x40      vsp = vsp - 4
+  0x84 0x80 pop {r11, r14}
+  0xb0      finish
+  0xb0      finish
+
+0x11634 <_ZSt8_DestroyIPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEvT_S7_>: @0x121d0
+  Compact model index: 1
+  0x9b      vsp = r11
+  0x40      vsp = vsp - 4
+  0x84 0x80 pop {r11, r14}
+  0xb0      finish
+  0xb0      finish
+
+0x11660 <_ZSt7forwardIRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEOT_RNSt16remove_referenceIS8_E4typeE>: 0x1 [cantunwind]
+
+0x11684 <_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE9constructIS6_JRKS6_EEEvPT_DpOT0_>: @0x121dc
+  Personality routine: 0x10b8c <_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@@GLIBCXX_3.4+0xc0>
+
+0x116e4 <_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorIS6_SaIS6_EEEC1ERKS7_>: 0x1 [cantunwind]
+
+0x1171c <_ZNKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE12_M_check_lenEjPKc>: @0x121f4
+  Compact model index: 1
+  0x9b      vsp = r11
+  0x41      vsp = vsp - 8
+  0x84 0x81 pop {r4, r11, r14}
+  0xb0      finish
+  0xb0      finish
+
+0x11808 <_ZNSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE5beginEv>: 0x1 [cantunwind]
+
+0x118b0 <_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS5_EE11_M_allocateEj>: @0x12200
+  Compact model index: 1
+  0x9b      vsp = r11
+  0x40      vsp = vsp - 4
+  0x84 0x80 pop {r11, r14}
+  0xb0      finish
+  0xb0      finish
+
+0x118f8 <_ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorIS6_SaIS6_EEE4baseEv>: 0x1 [cantunwind]
+
+0x1191c <_ZSt34__uninitialized_move_if_noexcept_aIPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_SaIS5_EET0_T_S9_S8_RT1_>: @0x1220c
+  Compact model index: 1
+  0x9b      vsp = r11
+  0x41      vsp = vsp - 8
+  0x84 0x81 pop {r4, r11, r14}
+  0xb0      finish
+  0xb0      finish
+
+0x11970 <_ZNSt16allocator_traitsISaINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEE7destroyIS5_EEvRS6_PT_>: 0x1 [cantunwind]
+
+0x11af0 <_ZNSt16allocator_traitsISaINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEE8allocateERS6_j>: @0x12218
+  Compact model index: 1
+  0x9b      vsp = r11
+  0x40      vsp = vsp - 4
+  0x84 0x80 pop {r11, r14}
+  0xb0      finish
+  0xb0      finish
+
+0x11b24 <_ZSt32__make_move_if_noexcept_iteratorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt13move_iteratorIPS5_EET0_PT_>: 0x1 [cantunwind]
+
+0x11b54 <_ZSt22__uninitialized_copy_aISt13move_iteratorIPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEES7_S6_ET0_T_SA_S9_RSaIT1_E>: @0x12224
+  Compact model index: 1
+  0x9b      vsp = r11
+  0x40      vsp = vsp - 4
+  0x84 0x80 pop {r11, r14}
+  0xb0      finish
+  0xb0      finish
+
+0x11b90 <_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE7destroyIS6_EEvPT_>: 0x1 [cantunwind]
+
+0x11c9c <_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE8allocateEjPKv>: @0x12230
+  Compact model index: 1
+  0x9b      vsp = r11
+  0x40      vsp = vsp - 4
+  0x84 0x80 pop {r11, r14}
+  0xb0      finish
+  0xb0      finish
+
+0x11d0c <_ZNSt13move_iteratorIPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEC2ES6_>: 0x1 [cantunwind]
+
+0x11d40 <_ZSt18uninitialized_copyISt13move_iteratorIPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEES7_ET0_T_SA_S9_>: @0x1223c
+  Compact model index: 1
+  0x9b      vsp = r11
+  0x40      vsp = vsp - 4
+  0x84 0x80 pop {r11, r14}
+  0xb0      finish
+  0xb0      finish
+
+0x11d80 <_ZNK9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE8max_sizeEv>: 0x1 [cantunwind]
+
+0x11da8 <_ZNSt20__uninitialized_copyILb0EE13__uninit_copyISt13move_iteratorIPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEES9_EET0_T_SC_SB_>: @0x12248
+  Personality routine: 0x10b8c <_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@@GLIBCXX_3.4+0xc0>
+
+0x11e64 <_ZStneIPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEbRKSt13move_iteratorIT_ESB_>: @0x12270
+  Compact model index: 1
+  0x9b      vsp = r11
+  0x40      vsp = vsp - 4
+  0x84 0x80 pop {r11, r14}
+  0xb0      finish
+  0xb0      finish
+
+0x11e9c <_ZNSt13move_iteratorIPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEppEv>: 0x1 [cantunwind]
+
+
+Symbol table '.dynsym' contains 31 entries:
+   Num:    Value  Size Type    Bind   Vis      Ndx Name
+     0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 00000000     0 FUNC    GLOBAL DEFAULT  UND __ae[...]@GCC_3.5 (7)
+     2: 00000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_deregisterT[...]
+     3: 00000000     0 NOTYPE  WEAK   DEFAULT  UND __gmon_start__
+     4: 00000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_registerTMC[...]
+     5: 00000000     0 FUNC    GLOBAL DEFAULT  UND _[...]@CXXABI_1.3 (4)
+     6: 00000000     0 FUNC    GLOBAL DEFAULT  UND [...]@GLIBCXX_3.4.21 (5)
+     7: 00000000     0 FUNC    GLOBAL DEFAULT  UND [...]@GLIBCXX_3.4 (2)
+     8: 00000000     0 FUNC    GLOBAL DEFAULT  UND [...]@GLIBCXX_3.4.21 (5)
+     9: 00023110   144 OBJECT  GLOBAL DEFAULT   24 [...]@GLIBCXX_3.4 (2)
+    10: 00000000     0 FUNC    GLOBAL DEFAULT  UND abort@GLIBC_2.4 (6)
+    11: 00000000     0 FUNC    GLOBAL DEFAULT  UND [...]@GLIBCXX_3.4.21 (5)
+    12: 00000000     0 FUNC    GLOBAL DEFAULT  UND _[...]@CXXABI_1.3 (4)
+    13: 00000000     0 FUNC    GLOBAL DEFAULT  UND _[...]@CXXABI_1.3 (4)
+    14: 00000000     0 FUNC    GLOBAL DEFAULT  UND __[...]@GLIBC_2.4 (6)
+    15: 00000000     0 FUNC    GLOBAL DEFAULT  UND @CXXABI_ARM_1.3.3 (3)
+    16: 00000000     0 FUNC    GLOBAL DEFAULT  UND [...]@GLIBCXX_3.4 (2)
+    17: 00010bb0     0 FUNC    GLOBAL DEFAULT  UND [...]@GLIBCXX_3.4 (2)
+    18: 00000000     0 FUNC    GLOBAL DEFAULT  UND [...]@GLIBCXX_3.4 (2)
+    19: 00000000     0 FUNC    GLOBAL DEFAULT  UND _Znwj@GLIBCXX_3.4 (2)
+    20: 00000000     0 FUNC    GLOBAL DEFAULT  UND [...]@GLIBCXX_3.4.21 (5)
+    21: 00000000     0 FUNC    GLOBAL DEFAULT  UND _[...]@CXXABI_1.3 (4)
+    22: 00010acc     0 FUNC    GLOBAL DEFAULT  UND [...]@GLIBCXX_3.4 (2)
+    23: 00000000     0 FUNC    GLOBAL DEFAULT  UND [...]@GLIBCXX_3.4.21 (5)
+    24: 00000000     0 FUNC    GLOBAL DEFAULT  UND [...]@GLIBCXX_3.4.21 (5)
+    25: 00000000     0 FUNC    GLOBAL DEFAULT  UND [...]@GLIBCXX_3.4 (2)
+    26: 00000000     0 FUNC    GLOBAL DEFAULT  UND [...]@GLIBCXX_3.4 (2)
+    27: 00023080   140 OBJECT  GLOBAL DEFAULT   24 [...]@GLIBCXX_3.4 (2)
+    28: 00000000     0 FUNC    GLOBAL DEFAULT  UND [...]@GLIBCXX_3.4 (2)
+    29: 00000000     0 FUNC    GLOBAL DEFAULT  UND _[...]@CXXABI_1.3 (4)
+    30: 00000000     0 FUNC    GLOBAL DEFAULT  UND [...]@GLIBCXX_3.4.21 (5)
+
+Symbol table '.symtab' contains 345 entries:
+   Num:    Value  Size Type    Bind   Vis      Ndx Name
+     0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 00010154     0 SECTION LOCAL  DEFAULT    1 .interp
+     2: 00010170     0 SECTION LOCAL  DEFAULT    2 .note.ABI-tag
+     3: 00010190     0 SECTION LOCAL  DEFAULT    3 .note.gnu.build-id
+     4: 000101b4     0 SECTION LOCAL  DEFAULT    4 .gnu.hash
+     5: 00010290     0 SECTION LOCAL  DEFAULT    5 .dynsym
+     6: 00010480     0 SECTION LOCAL  DEFAULT    6 .dynstr
+     7: 000108c2     0 SECTION LOCAL  DEFAULT    7 .gnu.version
+     8: 00010900     0 SECTION LOCAL  DEFAULT    8 .gnu.version_r
+     9: 00010990     0 SECTION LOCAL  DEFAULT    9 .rel.dyn
+    10: 000109a8     0 SECTION LOCAL  DEFAULT   10 .rel.plt
+    11: 00010a70     0 SECTION LOCAL  DEFAULT   11 .init
+    12: 00010a7c     0 SECTION LOCAL  DEFAULT   12 .plt
+    13: 00010bbc     0 SECTION LOCAL  DEFAULT   13 .text
+    14: 00012040     0 SECTION LOCAL  DEFAULT   14 .fini
+    15: 00012048     0 SECTION LOCAL  DEFAULT   15 .rodata
+    16: 00012110     0 SECTION LOCAL  DEFAULT   16 .ARM.extab
+    17: 0001227c     0 SECTION LOCAL  DEFAULT   17 .ARM.exidx
+    18: 0001239c     0 SECTION LOCAL  DEFAULT   18 .eh_frame
+    19: 00022ef4     0 SECTION LOCAL  DEFAULT   19 .init_array
+    20: 00022efc     0 SECTION LOCAL  DEFAULT   20 .fini_array
+    21: 00022f00     0 SECTION LOCAL  DEFAULT   21 .dynamic
+    22: 00023000     0 SECTION LOCAL  DEFAULT   22 .got
+    23: 00023074     0 SECTION LOCAL  DEFAULT   23 .data
+    24: 00023080     0 SECTION LOCAL  DEFAULT   24 .bss
+    25: 00000000     0 SECTION LOCAL  DEFAULT   25 .comment
+    26: 00000000     0 SECTION LOCAL  DEFAULT   26 .ARM.attributes
+    27: 00000000     0 FILE    LOCAL  DEFAULT  ABS /usr/lib/gcc/arm[...]
+    28: 00010170     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    29: 00010bbc     0 NOTYPE  LOCAL  DEFAULT   13 $a
+    30: 0001227c     0 NOTYPE  LOCAL  DEFAULT   17 $d
+    31: 00010bec     0 NOTYPE  LOCAL  DEFAULT   13 $d
+    32: 00012048     0 NOTYPE  LOCAL  DEFAULT   15 $d
+    33: 00023074     0 NOTYPE  LOCAL  DEFAULT   23 $d
+    34: 00000000     0 FILE    LOCAL  DEFAULT  ABS /usr/lib/gcc/arm[...]
+    35: 00010bf8     0 NOTYPE  LOCAL  DEFAULT   13 $a
+    36: 00010bf8     0 FUNC    LOCAL  DEFAULT   13 call_weak_fn
+    37: 00010c14     0 NOTYPE  LOCAL  DEFAULT   13 $d
+    38: 00010a70     0 NOTYPE  LOCAL  DEFAULT   11 $a
+    39: 00012040     0 NOTYPE  LOCAL  DEFAULT   14 $a
+    40: 00000000     0 FILE    LOCAL  DEFAULT  ABS /usr/lib/gcc/arm[...]
+    41: 00010a78     0 NOTYPE  LOCAL  DEFAULT   11 $a
+    42: 00012044     0 NOTYPE  LOCAL  DEFAULT   14 $a
+    43: 00000000     0 FILE    LOCAL  DEFAULT  ABS crtstuff.c
+    44: 00010c1c     0 NOTYPE  LOCAL  DEFAULT   13 $a
+    45: 00010c1c     0 FUNC    LOCAL  DEFAULT   13 deregister_tm_clones
+    46: 00010c3c     0 NOTYPE  LOCAL  DEFAULT   13 $d
+    47: 00010c48     0 NOTYPE  LOCAL  DEFAULT   13 $a
+    48: 00010c48     0 FUNC    LOCAL  DEFAULT   13 register_tm_clones
+    49: 00010c74     0 NOTYPE  LOCAL  DEFAULT   13 $d
+    50: 00023078     0 NOTYPE  LOCAL  DEFAULT   23 $d
+    51: 00010c80     0 NOTYPE  LOCAL  DEFAULT   13 $a
+    52: 00010c80     0 FUNC    LOCAL  DEFAULT   13 __do_global_dtors_aux
+    53: 00010ca4     0 NOTYPE  LOCAL  DEFAULT   13 $d
+    54: 000231a0     1 OBJECT  LOCAL  DEFAULT   24 completed.10783
+    55: 00022efc     0 NOTYPE  LOCAL  DEFAULT   20 $d
+    56: 00022efc     0 OBJECT  LOCAL  DEFAULT   20 __do_global_dtor[...]
+    57: 00010ca8     0 NOTYPE  LOCAL  DEFAULT   13 $a
+    58: 00010ca8     0 FUNC    LOCAL  DEFAULT   13 frame_dummy
+    59: 00022ef4     0 NOTYPE  LOCAL  DEFAULT   19 $d
+    60: 00022ef4     0 OBJECT  LOCAL  DEFAULT   19 __frame_dummy_in[...]
+    61: 000231a0     0 NOTYPE  LOCAL  DEFAULT   24 $d
+    62: 00000000     0 FILE    LOCAL  DEFAULT  ABS vTest1.cpp
+    63: 00010f2c     0 NOTYPE  LOCAL  DEFAULT   13 $a
+    64: 00012294     0 NOTYPE  LOCAL  DEFAULT   17 $d
+    65: 00010f54     0 NOTYPE  LOCAL  DEFAULT   13 $a
+    66: 00012294     0 NOTYPE  LOCAL  DEFAULT   17 $d
+    67: 0001204c     0 NOTYPE  LOCAL  DEFAULT   15 $d
+    68: 0001204c     1 OBJECT  LOCAL  DEFAULT   15 _ZStL19piecewise[...]
+    69: 000231a4     1 OBJECT  LOCAL  DEFAULT   24 _ZStL8__ioinit
+    70: 000231a4     0 NOTYPE  LOCAL  DEFAULT   24 $d
+    71: 00010cac     0 NOTYPE  LOCAL  DEFAULT   13 $a
+    72: 00010e84     0 NOTYPE  LOCAL  DEFAULT   13 $d
+    73: 00012110     0 NOTYPE  LOCAL  DEFAULT   16 $d
+    74: 00012284     0 NOTYPE  LOCAL  DEFAULT   17 $d
+    75: 00010f78     0 NOTYPE  LOCAL  DEFAULT   13 $a
+    76: 0001213c     0 NOTYPE  LOCAL  DEFAULT   16 $d
+    77: 00012294     0 NOTYPE  LOCAL  DEFAULT   17 $d
+    78: 00010fa4     0 NOTYPE  LOCAL  DEFAULT   13 $a
+    79: 0001214c     0 NOTYPE  LOCAL  DEFAULT   16 $d
+    80: 0001229c     0 NOTYPE  LOCAL  DEFAULT   17 $d
+    81: 00011000     0 NOTYPE  LOCAL  DEFAULT   13 $a
+    82: 0001215c     0 NOTYPE  LOCAL  DEFAULT   16 $d
+    83: 000122a4     0 NOTYPE  LOCAL  DEFAULT   17 $d
+    84: 00011084     0 NOTYPE  LOCAL  DEFAULT   13 $a
+    85: 000122ac     0 NOTYPE  LOCAL  DEFAULT   17 $d
+    86: 000110e8     0 NOTYPE  LOCAL  DEFAULT   13 $a
+    87: 000122b4     0 NOTYPE  LOCAL  DEFAULT   17 $d
+    88: 0001112c     0 NOTYPE  LOCAL  DEFAULT   13 $a
+    89: 000122b4     0 NOTYPE  LOCAL  DEFAULT   17 $d
+    90: 00011154     0 NOTYPE  LOCAL  DEFAULT   13 $a
+    91: 000122b4     0 NOTYPE  LOCAL  DEFAULT   17 $d
+    92: 00011180     0 NOTYPE  LOCAL  DEFAULT   13 $a
+    93: 00012168     0 NOTYPE  LOCAL  DEFAULT   16 $d
+    94: 000122b4     0 NOTYPE  LOCAL  DEFAULT   17 $d
+    95: 00011208     0 NOTYPE  LOCAL  DEFAULT   13 $a
+    96: 000122bc     0 NOTYPE  LOCAL  DEFAULT   17 $d
+    97: 0001122c     0 NOTYPE  LOCAL  DEFAULT   13 $a
+    98: 00012178     0 NOTYPE  LOCAL  DEFAULT   16 $d
+    99: 000122c4     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   100: 0001125c     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   101: 00012184     0 NOTYPE  LOCAL  DEFAULT   16 $d
+   102: 000122cc     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   103: 0001129c     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   104: 000122d4     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   105: 000112d4     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   106: 00011578     0 NOTYPE  LOCAL  DEFAULT   13 $d
+   107: 00012190     0 NOTYPE  LOCAL  DEFAULT   16 $d
+   108: 000122dc     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   109: 0001157c     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   110: 000122e4     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   111: 000115c8     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   112: 000122ec     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   113: 000115f0     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   114: 000121c4     0 NOTYPE  LOCAL  DEFAULT   16 $d
+   115: 000122ec     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   116: 00011634     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   117: 000121d0     0 NOTYPE  LOCAL  DEFAULT   16 $d
+   118: 000122f4     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   119: 00011660     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   120: 000122fc     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   121: 00011684     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   122: 000121dc     0 NOTYPE  LOCAL  DEFAULT   16 $d
+   123: 00012304     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   124: 000116e4     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   125: 0001230c     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   126: 0001171c     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   127: 000121f4     0 NOTYPE  LOCAL  DEFAULT   16 $d
+   128: 00012314     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   129: 00011808     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   130: 0001231c     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   131: 0001183c     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   132: 00012324     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   133: 000118b0     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   134: 00012200     0 NOTYPE  LOCAL  DEFAULT   16 $d
+   135: 00012324     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   136: 000118f8     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   137: 0001232c     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   138: 0001191c     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   139: 0001220c     0 NOTYPE  LOCAL  DEFAULT   16 $d
+   140: 00012334     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   141: 00011970     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   142: 0001233c     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   143: 0001199c     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   144: 00012344     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   145: 000119c4     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   146: 00012344     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   147: 000119e8     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   148: 00012344     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   149: 00011a1c     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   150: 00012344     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   151: 00011a70     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   152: 00012344     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   153: 00011aa8     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   154: 00012344     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   155: 00011af0     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   156: 00012218     0 NOTYPE  LOCAL  DEFAULT   16 $d
+   157: 00012344     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   158: 00011b24     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   159: 0001234c     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   160: 00011b54     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   161: 00012224     0 NOTYPE  LOCAL  DEFAULT   16 $d
+   162: 00012354     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   163: 00011b90     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   164: 0001235c     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   165: 00011bb8     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   166: 00012364     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   167: 00011bdc     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   168: 00012364     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   169: 00011c08     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   170: 00012364     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   171: 00011c2c     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   172: 00012364     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   173: 00011c50     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   174: 00012364     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   175: 00011c78     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   176: 00012364     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   177: 00011c9c     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   178: 00012230     0 NOTYPE  LOCAL  DEFAULT   16 $d
+   179: 00012364     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   180: 00011d0c     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   181: 0001236c     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   182: 00011d40     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   183: 0001223c     0 NOTYPE  LOCAL  DEFAULT   16 $d
+   184: 00012374     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   185: 00011d80     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   186: 00011da4     0 NOTYPE  LOCAL  DEFAULT   13 $d
+   187: 0001237c     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   188: 00011da8     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   189: 00012248     0 NOTYPE  LOCAL  DEFAULT   16 $d
+   190: 00012384     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   191: 00011e64     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   192: 00012270     0 NOTYPE  LOCAL  DEFAULT   16 $d
+   193: 0001238c     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   194: 00011e9c     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   195: 00012394     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   196: 00011ed4     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   197: 0001239c     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   198: 00011efc     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   199: 0001239c     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   200: 00011f48     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   201: 0001239c     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   202: 00011f90     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   203: 0001239c     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   204: 00011fb4     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   205: 0001239c     0 NOTYPE  LOCAL  DEFAULT   17 $d
+   206: 00010eac     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   207: 00010eac   100 FUNC    LOCAL  DEFAULT   13 _Z41__static_ini[...]
+   208: 00010f00     0 NOTYPE  LOCAL  DEFAULT   13 $d
+   209: 00010f10     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   210: 00010f10    28 FUNC    LOCAL  DEFAULT   13 _GLOBAL__sub_I_main
+   211: 00010f28     0 NOTYPE  LOCAL  DEFAULT   13 $d
+   212: 00022ef8     0 NOTYPE  LOCAL  DEFAULT   19 $d
+   213: 00000000     0 FILE    LOCAL  DEFAULT  ABS elf-init.oS
+   214: 00011fdc     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   215: 00012034     0 NOTYPE  LOCAL  DEFAULT   13 $d
+   216: 0001203c     0 NOTYPE  LOCAL  DEFAULT   13 $a
+   217: 00000000     0 FILE    LOCAL  DEFAULT  ABS crtstuff.c
+   218: 0001239c     0 NOTYPE  LOCAL  DEFAULT   18 $d
+   219: 0001239c     0 OBJECT  LOCAL  DEFAULT   18 __FRAME_END__
+   220: 00000000     0 FILE    LOCAL  DEFAULT  ABS 
+   221: 00022f00     0 OBJECT  LOCAL  DEFAULT   21 _DYNAMIC
+   222: 00022efc     0 NOTYPE  LOCAL  DEFAULT   19 __init_array_end
+   223: 00022ef4     0 NOTYPE  LOCAL  DEFAULT   19 __init_array_start
+   224: 00023000     0 OBJECT  LOCAL  DEFAULT   22 _GLOBAL_OFFSET_TABLE_
+   225: 00010a7c     0 NOTYPE  LOCAL  DEFAULT   12 $a
+   226: 00010a8c     0 NOTYPE  LOCAL  DEFAULT   12 $d
+   227: 00010a90     0 NOTYPE  LOCAL  DEFAULT   12 $a
+   228: 000115f0    68 FUNC    WEAK   DEFAULT   13 _ZNSt12_Vector_b[...]
+   229: 00000000     0 FUNC    GLOBAL DEFAULT  UND _Znwj@@GLIBCXX_3.4
+   230: 00000000     0 FUNC    GLOBAL DEFAULT  UND __aeabi_atexit@@[...]
+   231: 00011a1c    84 FUNC    WEAK   DEFAULT   13 _ZNSt12_Destroy_[...]
+   232: 000115c8    40 FUNC    WEAK   DEFAULT   13 _ZNSaINSt7__cxx1[...]
+   233: 00011154    44 FUNC    WEAK   DEFAULT   13 _ZNSt12_Vector_b[...]
+   234: 0001199c    40 FUNC    WEAK   DEFAULT   13 _ZNSaINSt7__cxx1[...]
+   235: 0002307c     0 NOTYPE  GLOBAL DEFAULT   23 _edata
+   236: 0001157c    76 FUNC    WEAK   DEFAULT   13 _ZNSt12_Vector_b[...]
+   237: 00023074     0 NOTYPE  WEAK   DEFAULT   23 data_start
+   238: 000116e4    56 FUNC    WEAK   DEFAULT   13 _ZN9__gnu_cxx17_[...]
+   239: 00012048     4 OBJECT  GLOBAL DEFAULT   15 _IO_stdin_used
+   240: 0001112c    40 FUNC    WEAK   DEFAULT   13 _ZNSt12_Vector_b[...]
+   241: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZSt17__throw_ba[...]
+   242: 000118f8    36 FUNC    WEAK   DEFAULT   13 _ZNK9__gnu_cxx17[...]
+   243: 00000000     0 FUNC    GLOBAL DEFAULT  UND __cxa_begin_catc[...]
+   244: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZNSt7__cxx1112b[...]
+   245: 00011aa8    72 FUNC    WEAK   DEFAULT   13 _ZSt3maxIjERKT_S2_S2_
+   246: 00010cac   512 FUNC    GLOBAL DEFAULT   13 main
+   247: 00010acc     0 FUNC    GLOBAL DEFAULT  UND _ZSt4endlIcSt11c[...]
+   248: 00011da8   188 FUNC    WEAK   DEFAULT   13 _ZNSt20__uniniti[...]
+   249: 000118b0    72 FUNC    WEAK   DEFAULT   13 _ZNSt12_Vector_b[...]
+   250: 00011000   132 FUNC    WEAK   DEFAULT   13 _ZNSt6vectorINSt[...]
+   251: 000231a8     0 NOTYPE  GLOBAL DEFAULT   24 __end__
+   252: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZSt20__throw_le[...]
+   253: 00023078     0 OBJECT  GLOBAL HIDDEN    23 __dso_handle
+   254: 00011c2c    36 FUNC    WEAK   DEFAULT   13 _ZSt8_DestroyINS[...]
+   255: 000116e4    56 FUNC    WEAK   DEFAULT   13 _ZN9__gnu_cxx17_[...]
+   256: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZNSt7__cxx1112b[...]
+   257: 00011d0c    52 FUNC    WEAK   DEFAULT   13 _ZNSt13move_iter[...]
+   258: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZNSt7__cxx1112b[...]
+   259: 000110e8    68 FUNC    WEAK   DEFAULT   13 _ZNSt6vectorINSt[...]
+   260: 00011d0c    52 FUNC    WEAK   DEFAULT   13 _ZNSt13move_iter[...]
+   261: 00010f2c    40 FUNC    WEAK   DEFAULT   13 _ZnwjPv
+   262: 00011efc    76 FUNC    WEAK   DEFAULT   13 _ZSt10_Construct[...]
+   263: 00010fa4    92 FUNC    WEAK   DEFAULT   13 _ZNSt6vectorINSt[...]
+   264: 00012040     0 FUNC    GLOBAL HIDDEN    14 _fini
+   265: 000231a8     0 NOTYPE  GLOBAL DEFAULT   24 __bss_end__
+   266: 0001171c   236 FUNC    WEAK   DEFAULT   13 _ZNKSt6vectorINS[...]
+   267: 000115c8    40 FUNC    WEAK   DEFAULT   13 _ZNSaINSt7__cxx1[...]
+   268: 00011684    96 FUNC    WEAK   DEFAULT   13 _ZN9__gnu_cxx13n[...]
+   269: 00011a70    56 FUNC    WEAK   DEFAULT   13 _ZNKSt6vectorINS[...]
+   270: 00011c08    36 FUNC    WEAK   DEFAULT   13 _ZSt11__addresso[...]
+   271: 00011b54    60 FUNC    WEAK   DEFAULT   13 _ZSt22__uninitia[...]
+   272: 00000000     0 FUNC    GLOBAL DEFAULT  UND abort@@GLIBC_2.4
+   273: 00011bdc    44 FUNC    WEAK   DEFAULT   13 _ZN9__gnu_cxx13n[...]
+   274: 00011154    44 FUNC    WEAK   DEFAULT   13 _ZNSt12_Vector_b[...]
+   275: 000231a8     0 NOTYPE  GLOBAL DEFAULT   24 _bss_end__
+   276: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZStlsIcSt11char[...]
+   277: 00011180   136 FUNC    WEAK   DEFAULT   13 _ZNSt12_Vector_b[...]
+   278: 0001125c    64 FUNC    WEAK   DEFAULT   13 _ZNSt16allocator[...]
+   279: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZdlPv@@GLIBCXX_3.4
+   280: 00010bbc     0 FUNC    GLOBAL DEFAULT   13 _start
+   281: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZStlsISt11char_[...]
+   282: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZNSolsEPFRSoS_E[...]
+   283: 00011bb8    36 FUNC    WEAK   DEFAULT   13 _ZN9__gnu_cxx13n[...]
+   284: 0001112c    40 FUNC    WEAK   DEFAULT   13 _ZNSt12_Vector_b[...]
+   285: 00010a70     0 FUNC    GLOBAL HIDDEN    11 _init
+   286: 00000000     0 FUNC    GLOBAL DEFAULT  UND __cxa_end_cleanu[...]
+   287: 0002307c     0 OBJECT  GLOBAL HIDDEN    23 __TMC_END__
+   288: 000112d4   680 FUNC    WEAK   DEFAULT   13 _ZNSt6vectorINSt[...]
+   289: 0001157c    76 FUNC    WEAK   DEFAULT   13 _ZNSt12_Vector_b[...]
+   290: 00011b24    48 FUNC    WEAK   DEFAULT   13 _ZSt32__make_mov[...]
+   291: 00011660    36 FUNC    WEAK   DEFAULT   13 _ZSt7forwardIRKN[...]
+   292: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZNKSt9basic_ios[...]
+   293: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZStrsIcSt11char[...]
+   294: 00023080   140 OBJECT  GLOBAL DEFAULT   24 _ZSt4cout@@GLIBC[...]
+   295: 0001122c    48 FUNC    WEAK   DEFAULT   13 _ZSt8_DestroyIPN[...]
+   296: 00011e9c    56 FUNC    WEAK   DEFAULT   13 _ZNSt13move_iter[...]
+   297: 000119e8    52 FUNC    WEAK   DEFAULT   13 _ZNSt16allocator[...]
+   298: 0002307c     0 NOTYPE  GLOBAL DEFAULT   24 __bss_start__
+   299: 00011ed4    40 FUNC    WEAK   DEFAULT   13 _ZNKSt13move_ite[...]
+   300: 00023074     0 NOTYPE  GLOBAL DEFAULT   23 __data_start
+   301: 000231a8     0 NOTYPE  GLOBAL DEFAULT   24 _end
+   302: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZNSt7__cxx1112b[...]
+   303: 00010fa4    92 FUNC    WEAK   DEFAULT   13 _ZNSt6vectorINSt[...]
+   304: 00010f78    44 FUNC    WEAK   DEFAULT   13 _ZNSt6vectorINSt[...]
+   305: 00011c9c   112 FUNC    WEAK   DEFAULT   13 _ZN9__gnu_cxx13n[...]
+   306: 00000000     0 FUNC    GLOBAL DEFAULT  UND __cxa_rethrow@@C[...]
+   307: 00011f90    36 FUNC    WEAK   DEFAULT   13 _ZSt7forwardINSt[...]
+   308: 0002307c     0 NOTYPE  GLOBAL DEFAULT   24 __bss_start
+   309: 0001199c    40 FUNC    WEAK   DEFAULT   13 _ZNSaINSt7__cxx1[...]
+   310: 00000000     0 FUNC    GLOBAL DEFAULT  UND _ZNSt8ios_base4I[...]
+   311: 00011fdc    96 FUNC    GLOBAL DEFAULT   13 __libc_csu_init
+   312: 00000000     0 FUNC    GLOBAL DEFAULT  UND __aeabi_unwind_c[...]
+   313: 0001191c    84 FUNC    WEAK   DEFAULT   13 _ZSt34__uninitia[...]
+   314: 00011634    44 FUNC    WEAK   DEFAULT   13 _ZSt8_DestroyIPN[...]
+   315: 00000000     0 FUNC    GLOBAL DEFAULT  UND __cxa_end_catch@[...]
+   316: 00000000     0 FUNC    GLOBAL DEFAULT  UND __gxx_personalit[...]
+   317: 00011808    52 FUNC    WEAK   DEFAULT   13 _ZNSt6vectorINSt[...]
+   318: 00011c78    36 FUNC    WEAK   DEFAULT   13 _ZNKSt12_Vector_[...]
+   319: 0001129c    56 FUNC    WEAK   DEFAULT   13 _ZNSt6vectorINSt[...]
+   320: 00011fb4    40 FUNC    WEAK   DEFAULT   13 _ZNKSt13move_ite[...]
+   321: 00011c50    40 FUNC    WEAK   DEFAULT   13 _ZNSt16allocator[...]
+   322: 0001183c   116 FUNC    WEAK   DEFAULT   13 _ZN9__gnu_cxxmiI[...]
+   323: 000119c4    36 FUNC    WEAK   DEFAULT   13 _ZN9__gnu_cxx13n[...]
+   324: 00000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_deregisterT[...]
+   325: 00011d80    40 FUNC    WEAK   DEFAULT   13 _ZNK9__gnu_cxx13[...]
+   326: 00010f78    44 FUNC    WEAK   DEFAULT   13 _ZNSt6vectorINSt[...]
+   327: 0001203c     4 FUNC    GLOBAL DEFAULT   13 __libc_csu_fini
+   328: 00011180   136 FUNC    WEAK   DEFAULT   13 _ZNSt12_Vector_b[...]
+   329: 00011b90    40 FUNC    WEAK   DEFAULT   13 _ZN9__gnu_cxx13n[...]
+   330: 00011f48    72 FUNC    WEAK   DEFAULT   13 _ZSteqIPNSt7__cx[...]
+   331: 00011bb8    36 FUNC    WEAK   DEFAULT   13 _ZN9__gnu_cxx13n[...]
+   332: 00011084   100 FUNC    WEAK   DEFAULT   13 _ZNKSt6vectorINS[...]
+   333: 00011970    44 FUNC    WEAK   DEFAULT   13 _ZNSt16allocator[...]
+   334: 00023110   144 OBJECT  GLOBAL DEFAULT   24 _ZSt3cin@@GLIBCXX_3.4
+   335: 00000000     0 FUNC    GLOBAL DEFAULT  UND __libc_start_mai[...]
+   336: 00011af0    52 FUNC    WEAK   DEFAULT   13 _ZNSt16allocator[...]
+   337: 00000000     0 NOTYPE  WEAK   DEFAULT  UND __gmon_start__
+   338: 00011d40    64 FUNC    WEAK   DEFAULT   13 _ZSt18uninitiali[...]
+   339: 00010f54    36 FUNC    WEAK   DEFAULT   13 _ZdlPvS_
+   340: 00000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_registerTMC[...]
+   341: 00011e64    56 FUNC    WEAK   DEFAULT   13 _ZStneIPNSt7__cx[...]
+   342: 00011208    36 FUNC    WEAK   DEFAULT   13 _ZNSt12_Vector_b[...]
+   343: 000119c4    36 FUNC    WEAK   DEFAULT   13 _ZN9__gnu_cxx13n[...]
+   344: 00010bb0     0 FUNC    GLOBAL DEFAULT  UND _ZNSt8ios_base4I[...]
+
+Histogram for `.gnu.hash' bucket list length (total of 17 buckets):
+ Length  Number     % of total  Coverage
+      0  5          ( 29.4%)
+      1  4          ( 23.5%)     15.4%
+      2  4          ( 23.5%)     46.2%
+      3  2          ( 11.8%)     69.2%
+      4  2          ( 11.8%)    100.0%
+
+Version symbols section '.gnu.version' contains 31 entries:
+ Addr: 0x00000000000108c2  Offset: 0x0008c2  Link: 5 (.dynsym)
+  000:   0 (*local*)       7 (GCC_3.5)       0 (*local*)       0 (*local*)    
+  004:   0 (*local*)       4 (CXXABI_1.3)    5 (GLIBCXX_3.4.21)    2 (GLIBCXX_3.4)
+  008:   5 (GLIBCXX_3.4.21)    2 (GLIBCXX_3.4)   6 (GLIBC_2.4)     5 (GLIBCXX_3.4.21) 
+  00c:   4 (CXXABI_1.3)    4 (CXXABI_1.3)    6 (GLIBC_2.4)     3 (CXXABI_ARM_1.3.3)   
+  010:   2 (GLIBCXX_3.4)   2 (GLIBCXX_3.4)   2 (GLIBCXX_3.4)   2 (GLIBCXX_3.4)
+  014:   5 (GLIBCXX_3.4.21)    4 (CXXABI_1.3)    2 (GLIBCXX_3.4)   5 (GLIBCXX_3.4.21) 
+  018:   5 (GLIBCXX_3.4.21)    2 (GLIBCXX_3.4)   2 (GLIBCXX_3.4)   2 (GLIBCXX_3.4)
+  01c:   2 (GLIBCXX_3.4)   4 (CXXABI_1.3)    5 (GLIBCXX_3.4.21) 
+
+Version needs section '.gnu.version_r' contains 3 entries:
+ Addr: 0x0000000000010900  Offset: 0x000900  Link: 6 (.dynstr)
+  000000: Version: 1  File: libgcc_s.so.1  Cnt: 1
+  0x0010:   Name: GCC_3.5  Flags: none  Version: 7
+  0x0020: Version: 1  File: libc.so.6  Cnt: 1
+  0x0030:   Name: GLIBC_2.4  Flags: none  Version: 6
+  0x0040: Version: 1  File: libstdc++.so.6  Cnt: 4
+  0x0050:   Name: GLIBCXX_3.4.21  Flags: none  Version: 5
+  0x0060:   Name: CXXABI_1.3  Flags: none  Version: 4
+  0x0070:   Name: CXXABI_ARM_1.3.3  Flags: none  Version: 3
+  0x0080:   Name: GLIBCXX_3.4  Flags: none  Version: 2
+
+Displaying notes found in: .note.ABI-tag
+  Owner                Data size 	Description
+  GNU                  0x00000010	NT_GNU_ABI_TAG (ABI version tag)
+    OS: Linux, ABI: 3.2.0
+
+Displaying notes found in: .note.gnu.build-id
+  Owner                Data size 	Description
+  GNU                  0x00000014	NT_GNU_BUILD_ID (unique build ID bitstring)
+    Build ID: 745a56c3bd276f1bfd2a3cb0aecd3c17ee7f24d5
+Attribute Section: aeabi
+File Attributes
+  Tag_CPU_name: "6"
+  Tag_CPU_arch: v6
+  Tag_ARM_ISA_use: Yes
+  Tag_THUMB_ISA_use: Thumb-1
+  Tag_FP_arch: VFPv2
+  Tag_ABI_PCS_wchar_t: 4
+  Tag_ABI_FP_rounding: Needed
+  Tag_ABI_FP_denormal: Needed
+  Tag_ABI_FP_exceptions: Needed
+  Tag_ABI_FP_number_model: IEEE 754
+  Tag_ABI_align_needed: 8-byte
+  Tag_ABI_align_preserved: 8-byte, except leaf SP
+  Tag_ABI_enum_size: int
+  Tag_ABI_VFP_args: VFP registers
+  Tag_CPU_unaligned_access: v6
