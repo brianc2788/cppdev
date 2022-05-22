@@ -12,16 +12,20 @@ hosted on http://www.github.com/user5260/cpp-projects/sdl-demo-04/
 
 int main(int argc,char* argv[]){
     EngineZero eng0;
-    bool success = eng0.init("Demo 04",640,480,SDL_INIT_VIDEO|SDL_INIT_EVENTS,SDL_WINDOW_SHOWN);
+    bool success = eng0.init("Demo 04",
+                              640,480,
+                              SDL_INIT_VIDEO|SDL_INIT_EVENTS,
+                              SDL_WINDOW_SHOWN);
+    
     if(success){
         eng0.PrintOut("Init success.\n");
         eng0.RenderAndShow();
         eng0.WaitForQuitEvent();
         eng0.QuitE0();
-    }
-    else{
+    }else{
         eng0.PrintOut("Failed.\n");
         eng0.QuitE0();
     }
+    
     return 0;
 }
