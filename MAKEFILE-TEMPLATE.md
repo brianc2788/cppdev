@@ -1,9 +1,13 @@
-# A makefile template
+# MAKEFILE-TEMPLATE
+# -----------------
+# A template for creating makefiles for C/Cpp projects.
+# Uses gcc with no special compiler/linker flags.
+
 SRC = main.cpp
 OUT = out.bin
 COMPILER = g++
-C_FLAGS = 
-L_FLAGS = 
+CFLAGS = 
+LFLAGS = 
 
 all : $(SRC)
 	$(COMPILER) $(SRC) $(CFLAGS) $(LFLAGS) -o $(OUT)
