@@ -12,7 +12,7 @@
 //				  keeping this a functioning application and will build on in a future
 //				  version.
 #include <iostream>
-#include <stdio.h>
+//#include <stdio.h>
 using namespace std;
 
 int main(int argc, char* argv[]) {
