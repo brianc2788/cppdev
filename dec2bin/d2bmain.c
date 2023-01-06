@@ -4,7 +4,7 @@
 Prompts user for a decimal number. Prints
 the binary equivalent.
 
-brianc2788@gmail.com
+https://brianc2788.github.io/
 ******************************************************/
 #include <stdio.h>
 #include <stdbool.h>
@@ -32,25 +32,25 @@ int main(int argc,char* argv[]){
 }
 
 void PrintBitArray(int nDecimal){
-    //If the user enters "1"...
+    // If the user enters "1"...
     if (nDecimal == 1) {
         printf("1\n*1 bit\n\n");
     }
     else{
-        //Create an array of bits.
+        // Create an array of bits (integers representing binary values).
         int nIndex = 0;
         while(nDecimal != 0){
             nBitArray[nIndex] = (nDecimal % 2);
             nDecimal = nDecimal/2;
-            if(nDecimal != 0) nIndex++;
+            if(nDecimal != 0) nIndex++;     // Removes preceeding zero; e.g. without the if statement, 7 would print "0111".
         }
 
-        //Print the array of bits in reverse.
+        // Print the array of bits in reverse.
         for(int n = nIndex; n >= 0; n--){
             printf("%d",nBitArray[n]);
         }
 
-        //Print bits & bytes.
+        // Print bits & bytes.
         int nBits = nIndex+1;
         float fBytes = nBits/8.0f;
         printf("\n*%d Bits / %.1f Bytes.\n\n", nBits,fBytes);
