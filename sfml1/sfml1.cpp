@@ -11,8 +11,11 @@
 #include <stdio.h>
 #include <SFML/Graphics.hpp>
 
+int nScreenX = 640;
+int nScreenW = 480;
+
 int main(int argc, char* argv[]) {
-    sf::RenderWindow window(sf::VideoMode(640, 480), "SFML1");
+    sf::RenderWindow window(sf::VideoMode(nScreenX, nScreenW), "SFML1");
     sf::Font font;
 
     if (!font.loadFromFile("FreeMono.ttf")) {
