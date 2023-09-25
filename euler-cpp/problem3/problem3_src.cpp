@@ -12,8 +12,7 @@
  * https://brianc2788.github.io/
  * https://github.com/brianc2788/cppdev/tree/main/euler-cpp/problem3
 *******************************************************************************/
-#include <stdio.h>
-#include <stdbool.h>
+#include <iostream>
 
 #define MAX_ARRAY 100
 
@@ -32,22 +31,23 @@ int main(void) {
 
     int nCount = 0;
 
-    printf("Printing factors for: %d\n\n", lTarget);
+    std::cout << "Printing factors for: " << lTarget << std::endl;
 
     for (long n = 1; n <= lTarget; n++) {
         if (lTarget % n == 0){
-            printf("%d ", n);
+            std::cout << n;
 
             if (is_prime(n)) {
                 nCount++;
                 lPrimeFactors[nCount] = n;
-                printf("PRIME");
+                std::cout << "\tPRIME";
             }
-            printf("\n");
+
+            std::cout << std::endl;
         }
     }
 
-    printf("Largest prime factor for %d: %d\n", lTarget, lPrimeFactors[nCount]);
+    std::cout << "Largest prime factor for " << lTarget << ": " << lPrimeFactors[nCount] << std::endl;
 
     return 0;
 }
