@@ -15,6 +15,8 @@
 ******************************************************************************/
 #include <iostream>
 
+#define CEILING 4000000
+
 int main(int argc, char* argv[])
 {
 	std::cout << "Fibonacci #'s below 4 million..." << std::endl;
@@ -35,7 +37,7 @@ int main(int argc, char* argv[])
 		if (llsum % 2 == 0)
 			llevensum += llsum;
 
-		if (llsum >= 4000000){
+		if (llsum >= CEILING){
 			b4mil = true;
 			break;
 		}
