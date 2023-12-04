@@ -52,13 +52,13 @@ int main(int argc, char* argv[]){
 	}
 
 	// Print total days in a non-leap year.
-	int nTotalDays = 0;
+	int nDaysPerYear = 0;
 	for (int n = 0; n < TOTAL_MONTHS; ++n){
-		nTotalDays += monthArray[n].Length;
+		nDaysPerYear += monthArray[n].Length;
 	}
 
 	printf("\nTotal days in non-leap year: %d\n", nTotalDays);
-	printf("%d\n", ENUM_MON);
+	/* DEBUG END */
 
 	return 0;
 }
